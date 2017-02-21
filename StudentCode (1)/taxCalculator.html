@@ -7,8 +7,8 @@
       Project Title: Income Tax Calculator 
       Filename: taxCalculator.html
 
-      Author: 
-      Date:   
+      Author: Valerie Camacho
+      Date: 02/24/16  
    -->
    <meta charset="utf-8" />
    <meta id="viewport" content="width=device-width, initial-scale=1.0">
@@ -163,6 +163,7 @@
           }//end of single filer calculation
           
           else if(status == 1) {
+              
                  /*******************************************************************************
                   * Task 1:  Compute the tax for users' who file as "Married Jointly".  Also,
                   *          set (or initialize) the tax rate for each bracket.  Refer 
@@ -174,7 +175,42 @@
                   * 
                   *                       INSERT YOUR CODE BELOW!
                  *******************************************************************************/
-             
+             // Compute tax for married jointly filers
+               if (income <= 9225){
+                 tax = income * 0.10;
+                 taxRate = 10;
+               }//end of nested if
+               else if (income <= 37450) {
+                 tax = 9225 * 0.10 + (income - 9225) * 0.15;
+                 taxRate = 15;
+               }//end of else if
+               else if (income <= 90750) {
+                 tax = 9225 * 0.10 + (37450 - 9225) * 0.15 + (income - 37450) * 0.25;
+                 taxRate = 25;
+               } //end of else if
+               else if (income <= 189300) {
+                 tax = 9225 * 0.10 + (37450 - 9225) * 0.15 +
+                       (90750 - 37450) * 0.25 + (income - 90750) * 0.28;
+                 taxRate = 28;
+               }//end of else if
+               else if (income <= 411500) {
+                 tax = 9225 * 0.10 + (37450 - 9225) * 0.15 +
+                       (90750 - 37450) * 0.25 + (189300 - 90750) * 0.28 +
+                       (income - 189300) * 0.33;
+                 taxRate = 33;
+               }//end of else if
+               else if (income <= 413200) {
+                  tax = 9225 * 0.10 + (37450 - 9225) * 0.15 +
+                        (90750 - 37450) * 0.25 + (189300 - 90750) * 0.28 +
+                        (411500 - 189300) * 0.33 + (income - 411500) * 0.35;
+                  taxRate = 35;
+               }//end of else if
+               else {
+                  tax = 9225 * 0.10 + (37450 - 9225) * 0.15 +
+                        (90750 - 37450) * 0.25 + (189300 - 90750) * 0.28 +
+                        (411500 - 189300) * 0.33 + (413200 - 411500 ) * 0.35 + (income - 413200) * .396;
+                  taxRate = 39.6;
+               }//end of else
              
              
           }//end of married file jointly calculation
@@ -191,7 +227,42 @@
                   * 
                   *                       INSERT YOUR CODE BELOW!
                  *******************************************************************************/
-             
+             // Compute tax for married separately filers
+               if (income <= 9225){
+                 tax = income * 0.10;
+                 taxRate = 10;
+               }//end of nested if
+               else if (income <= 37450) {
+                 tax = 9225 * 0.10 + (income - 9225) * 0.15;
+                 taxRate = 15;
+               }//end of else if
+               else if (income <= 90750) {
+                 tax = 9225 * 0.10 + (37450 - 9225) * 0.15 + (income - 37450) * 0.25;
+                 taxRate = 25;
+               } //end of else if
+               else if (income <= 189300) {
+                 tax = 9225 * 0.10 + (37450 - 9225) * 0.15 +
+                       (90750 - 37450) * 0.25 + (income - 90750) * 0.28;
+                 taxRate = 28;
+               }//end of else if
+               else if (income <= 411500) {
+                 tax = 9225 * 0.10 + (37450 - 9225) * 0.15 +
+                       (90750 - 37450) * 0.25 + (189300 - 90750) * 0.28 +
+                       (income - 189300) * 0.33;
+                 taxRate = 33;
+               }//end of else if
+               else if (income <= 413200) {
+                  tax = 9225 * 0.10 + (37450 - 9225) * 0.15 +
+                        (90750 - 37450) * 0.25 + (189300 - 90750) * 0.28 +
+                        (411500 - 189300) * 0.33 + (income - 411500) * 0.35;
+                  taxRate = 35;
+               }//end of else if
+               else {
+                  tax = 9225 * 0.10 + (37450 - 9225) * 0.15 +
+                        (90750 - 37450) * 0.25 + (189300 - 90750) * 0.28 +
+                        (411500 - 189300) * 0.33 + (413200 - 411500 ) * 0.35 + (income - 413200) * .396;
+                  taxRate = 39.6;
+               }//end of else
              
              
           }//end of married file separately calculation
@@ -208,7 +279,42 @@
                   * 
                   *                       INSERT YOUR CODE BELOW!
                  *******************************************************************************/
-             
+             // Compute tax for head of household filers
+               if (income <= 9225){
+                 tax = income * 0.10;
+                 taxRate = 10;
+               }//end of nested if
+               else if (income <= 37450) {
+                 tax = 9225 * 0.10 + (income - 9225) * 0.15;
+                 taxRate = 15;
+               }//end of else if
+               else if (income <= 90750) {
+                 tax = 9225 * 0.10 + (37450 - 9225) * 0.15 + (income - 37450) * 0.25;
+                 taxRate = 25;
+               } //end of else if
+               else if (income <= 189300) {
+                 tax = 9225 * 0.10 + (37450 - 9225) * 0.15 +
+                       (90750 - 37450) * 0.25 + (income - 90750) * 0.28;
+                 taxRate = 28;
+               }//end of else if
+               else if (income <= 411500) {
+                 tax = 9225 * 0.10 + (37450 - 9225) * 0.15 +
+                       (90750 - 37450) * 0.25 + (189300 - 90750) * 0.28 +
+                       (income - 189300) * 0.33;
+                 taxRate = 33;
+               }//end of else if
+               else if (income <= 413200) {
+                  tax = 9225 * 0.10 + (37450 - 9225) * 0.15 +
+                        (90750 - 37450) * 0.25 + (189300 - 90750) * 0.28 +
+                        (411500 - 189300) * 0.33 + (income - 411500) * 0.35;
+                  taxRate = 35;
+               }//end of else if
+               else {
+                  tax = 9225 * 0.10 + (37450 - 9225) * 0.15 +
+                        (90750 - 37450) * 0.25 + (189300 - 90750) * 0.28 +
+                        (411500 - 189300) * 0.33 + (413200 - 411500 ) * 0.35 + (income - 413200) * .396;
+                  taxRate = 39.6;
+               }//end of else
              
              
              
@@ -262,6 +368,15 @@
               
               //This code resets the dropdown box to the "Single" filer status.
               document.getElementById("filingStatus").selectedIndex = 0;
+              
+              //This code resets the dropdown box to the "Married Jointly" filer status.
+              document.getElementById("filingStatus").selectedIndex = 1;
+              
+              //This code resets the dropdown box to the "Married Separately" filer status.
+              document.getElementById("filingStatus").selectedIndex = 2;
+              
+              //This code resets the dropdown box to the "Head of Household" filer status.
+              document.getElementById("filingStatus").selectedIndex = 3;
               
 
 
